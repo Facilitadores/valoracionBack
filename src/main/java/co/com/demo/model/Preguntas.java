@@ -1,15 +1,16 @@
 package co.com.demo.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity //tablas
 @Table(name="val_personal")
-public class Preguntas {
+public class Preguntas implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String facilitador;
     private String celula;
@@ -47,6 +48,49 @@ public class Preguntas {
     private String promedio_general;
     private String fortalezas;
     private String oportunidades;
+
+    public Preguntas() {
+    }
+
+    public Preguntas(int id, String facilitador, String celula, String usuario, String pre1Pi1, String pre2Pi1, String pre3Pi1, String observaP1, String promedioP1, String pre1Pi2, String pre2Pi2, String pre3Pi2, String observaP2, String promedioP2, String pre1Pi3, String pre2Pi3, String pre3Pi3, String observaP3, String promedioP3, String pre1Pi4, String pre2Pi4, String pre3Pi4, String observaP4, String promedioP4, String pre1Pi5, String pre2Pi5, String pre3Pi5, String observaP5, String promedioP5, String pre1Pi6, String pre2Pi6, String pre3Pi6, String observaP6, String promedioP6, String promedio_general, String fortalezas, String oportunidades) {
+        this.id = id;
+        this.facilitador = facilitador;
+        this.celula = celula;
+        this.usuario = usuario;
+        Pre1Pi1 = pre1Pi1;
+        Pre2Pi1 = pre2Pi1;
+        Pre3Pi1 = pre3Pi1;
+        this.observaP1 = observaP1;
+        this.promedioP1 = promedioP1;
+        Pre1Pi2 = pre1Pi2;
+        Pre2Pi2 = pre2Pi2;
+        Pre3Pi2 = pre3Pi2;
+        this.observaP2 = observaP2;
+        this.promedioP2 = promedioP2;
+        Pre1Pi3 = pre1Pi3;
+        Pre2Pi3 = pre2Pi3;
+        Pre3Pi3 = pre3Pi3;
+        this.observaP3 = observaP3;
+        this.promedioP3 = promedioP3;
+        Pre1Pi4 = pre1Pi4;
+        Pre2Pi4 = pre2Pi4;
+        Pre3Pi4 = pre3Pi4;
+        this.observaP4 = observaP4;
+        this.promedioP4 = promedioP4;
+        Pre1Pi5 = pre1Pi5;
+        Pre2Pi5 = pre2Pi5;
+        Pre3Pi5 = pre3Pi5;
+        this.observaP5 = observaP5;
+        this.promedioP5 = promedioP5;
+        Pre1Pi6 = pre1Pi6;
+        Pre2Pi6 = pre2Pi6;
+        Pre3Pi6 = pre3Pi6;
+        this.observaP6 = observaP6;
+        this.promedioP6 = promedioP6;
+        this.promedio_general = promedio_general;
+        this.fortalezas = fortalezas;
+        this.oportunidades = oportunidades;
+    }
 
     public int getId() {
         return id;
