@@ -14,21 +14,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin
 @RequestMapping("/valoracion")
 public class PreguntasController {
     @Autowired
     PreguntasRepository PreguntasRepository;
 
     //aca se debe realizar una validación si el usuario y la celula tienen datos debe actualizar si no es un insert
-    @CrossOrigin
+
     @PostMapping("/preguntas")
     public  Preguntas guardarPreguntas (@RequestBody Preguntas data)
     {
         return PreguntasRepository.save(data);
     }
 
-    @CrossOrigin
+
     @PostMapping("/preguntas1")
     public  Preguntas guardarPreguntasUno (@RequestBody Preguntas data)
     {
@@ -39,7 +39,7 @@ public class PreguntasController {
         preguntasDb.setPre3Pi1(data.getPre3Pi1());
         return PreguntasRepository.save(preguntasDb);
     }
-    @CrossOrigin
+
     @PostMapping("/preguntas2")
     public  Preguntas guardarPreguntasDos (@RequestBody Preguntas data)
     {

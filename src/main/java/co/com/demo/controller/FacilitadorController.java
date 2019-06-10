@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin
 @RequestMapping("/valoracion")
 public class FacilitadorController {
     @Autowired
