@@ -12,16 +12,17 @@ public class Tecnico implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String celula;
-    private int tecniconumeDevops;
+    private float tecniconumeDevops;
     private String tecnicoDevops;
-    private int arquitectnumeDevops;
+    private float arquitectnumeDevops;
     private String arquitectDevops;
-    private int estandaresnume;
+    private float estandaresnume;
     private String estandares;
-    private int aplicacionesnume;
+    private float aplicacionesnume;
     private String aplicaciones;
+    private int resultpilar2;
 
-    public Tecnico(int id, String celula, int tecniconumeDevops, String tecnicoDevops, int arquitectnumeDevops, String arquitectDevops, int estandaresnume, String estandares, int aplicacionesnume, String aplicaciones ) {
+    public Tecnico(int id, String celula, float tecniconumeDevops, String tecnicoDevops, float arquitectnumeDevops, String arquitectDevops, float estandaresnume, String estandares, float aplicacionesnume, String aplicaciones, int resultpilar2 ) {
         this.id = id;
         this.celula = celula;
         this.tecniconumeDevops = tecniconumeDevops;
@@ -32,6 +33,7 @@ public class Tecnico implements Serializable {
         this.estandares = estandares;
         this.aplicacionesnume = aplicacionesnume;
         this.aplicaciones = aplicaciones;
+        this.resultpilar2 = resultpilar2;
 
 
     }
@@ -56,11 +58,11 @@ public class Tecnico implements Serializable {
         this.celula = celula;
     }
 
-    public int getTecniconumeDevops() {
+    public float getTecniconumeDevops() {
         return tecniconumeDevops;
     }
 
-    public void setTecniconumeDevops(int tecniconumeDevops) {
+    public void setTecniconumeDevops(float tecniconumeDevops) {
         this.tecniconumeDevops = tecniconumeDevops;
     }
 
@@ -72,11 +74,11 @@ public class Tecnico implements Serializable {
         this.tecnicoDevops = tecnicoDevops;
     }
 
-    public int getArquitectnumeDevops() {
+    public float getArquitectnumeDevops() {
         return arquitectnumeDevops;
     }
 
-    public void setArquitectnumeDevops(int arquitectnumeDevops) {
+    public void setArquitectnumeDevops(float arquitectnumeDevops) {
         this.arquitectnumeDevops = arquitectnumeDevops;
     }
 
@@ -88,11 +90,11 @@ public class Tecnico implements Serializable {
         this.arquitectDevops = arquitectDevops;
     }
 
-    public int getEstandaresnume() {
+    public float getEstandaresnume() {
         return estandaresnume;
     }
 
-    public void setEstandaresnume(int estandaresnume) {
+    public void setEstandaresnume(float estandaresnume) {
         this.estandaresnume = estandaresnume;
     }
 
@@ -104,11 +106,11 @@ public class Tecnico implements Serializable {
         this.estandares = estandares;
     }
 
-    public int getAplicacionesnume() {
+    public float getAplicacionesnume() {
         return aplicacionesnume;
     }
 
-    public void setAplicacionesnume(int aplicacionesnume) {
+    public void setAplicacionesnume(float aplicacionesnume) {
         this.aplicacionesnume = aplicacionesnume;
     }
 
@@ -118,5 +120,13 @@ public class Tecnico implements Serializable {
 
     public void setAplicaciones(String aplicaciones) {
         this.aplicaciones = aplicaciones;
+    }
+
+    public int getResultpilar2() {
+        return resultpilar2;
+    }
+
+    public void setResultpilar2(int resultpilar2) {
+        this.resultpilar2 = resultpilar2;
     }
 }

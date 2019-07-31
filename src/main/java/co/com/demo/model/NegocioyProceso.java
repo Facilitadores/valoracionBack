@@ -12,16 +12,17 @@ public class NegocioyProceso implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String celula;
-    private int proceso_hy_mnume;
+    private float proceso_hy_mnume;
     private String proceso_hym;
-    private int usd_usmnume;
+    private float usd_usmnume;
     private String usd_usm;
-    private int practicasnume;
+    private float practicasnume;
     private String practicas;
-    private int negocionume;
+    private float negocionume;
     private String negocio;
+    private int resultpilar3;
 
-    public NegocioyProceso(int id, String celula, int proceso_hy_mnume, String proceso_hym, int usd_usmnume, String usd_usm, int practicasnume, String practicas, int negocionume, String negocio ) {
+    public NegocioyProceso(int id, String celula, float proceso_hy_mnume, String proceso_hym, float usd_usmnume, String usd_usm, float practicasnume, String practicas, float negocionume, String negocio, int resultpilar3 ) {
         this.id = id;
         this.celula = celula;
         this.proceso_hy_mnume = proceso_hy_mnume;
@@ -32,6 +33,7 @@ public class NegocioyProceso implements Serializable {
         this.practicas = practicas;
         this.negocionume = negocionume;
         this.negocio = negocio;
+        this.resultpilar3 = resultpilar3;
 
 
     }
@@ -56,11 +58,11 @@ public class NegocioyProceso implements Serializable {
         this.celula = celula;
     }
 
-    public int getProceso_hy_mnume() {
+    public float getProceso_hy_mnume() {
         return proceso_hy_mnume;
     }
 
-    public void setProceso_hy_mnume(int proceso_hy_mnume) {
+    public void setProceso_hy_mnume(float proceso_hy_mnume) {
         this.proceso_hy_mnume = proceso_hy_mnume;
     }
 
@@ -72,11 +74,11 @@ public class NegocioyProceso implements Serializable {
         this.proceso_hym = proceso_hym;
     }
 
-    public int getUsd_usmnume() {
+    public float getUsd_usmnume() {
         return usd_usmnume;
     }
 
-    public void setUsd_usmnume(int usd_usmnume) {
+    public void setUsd_usmnume(float usd_usmnume) {
         this.usd_usmnume = usd_usmnume;
     }
 
@@ -88,11 +90,11 @@ public class NegocioyProceso implements Serializable {
         this.usd_usm = usd_usm;
     }
 
-    public int getPracticasnume() {
+    public float getPracticasnume() {
         return practicasnume;
     }
 
-    public void setPracticasnume(int practicasnume) {
+    public void setPracticasnume(float practicasnume) {
         this.practicasnume = practicasnume;
     }
 
@@ -104,11 +106,11 @@ public class NegocioyProceso implements Serializable {
         this.practicas = practicas;
     }
 
-    public int getNegocionume() {
+    public float getNegocionume() {
         return negocionume;
     }
 
-    public void setNegocionume(int negocionume) {
+    public void setNegocionume(float negocionume) {
         this.negocionume = negocionume;
     }
 
@@ -118,6 +120,14 @@ public class NegocioyProceso implements Serializable {
 
     public void setNegocio(String negocio) {
         this.negocio = negocio;
+    }
+
+    public int getResultpilar3() {
+        return resultpilar3;
+    }
+
+    public void setResultpilar3(int resultpilar3) {
+        this.resultpilar3 = resultpilar3;
     }
 }
 
