@@ -18,8 +18,9 @@ public class Equipo implements Serializable {
     private String componente_menor;
     private String fullstack;
     private String nivel_madurez;
+    private String tipo_celula;
 
-    public Equipo(int id, String celula, String facilitador, String direccion, String componente_mayor, String componente_menor, String fullstack, String nivel_madurez) {
+    public Equipo(int id, String celula, String facilitador, String direccion, String componente_mayor, String componente_menor, String fullstack, String nivel_madurez, String tipo_celula) {
         this.id = id;
         this.celula = celula;
         this.facilitador = facilitador;
@@ -28,6 +29,7 @@ public class Equipo implements Serializable {
         this.componente_menor = componente_menor;
         this.fullstack = fullstack;
         this.nivel_madurez = nivel_madurez;
+        this.tipo_celula = tipo_celula;
     }
 
     public Equipo() {
@@ -96,5 +98,13 @@ public class Equipo implements Serializable {
 
     public void setNivel_madurez(String nivel_madurez) {
         this.nivel_madurez = nivel_madurez;
+    }
+
+    public String getTipo_celula() {
+        return tipo_celula;
+    }
+
+    public void setTipo_celula(String tipo_celula) {
+        this.tipo_celula = tipo_celula;
     }
 }

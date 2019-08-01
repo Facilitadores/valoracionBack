@@ -26,4 +26,5 @@ public class AgilismoController {
     public List<Object> finddistinctallby(@PathVariable(value="celula") String celula) {
         return agilismoRepository.finddistinctallby(celula);
     }
+
 }

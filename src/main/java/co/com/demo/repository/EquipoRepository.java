@@ -24,8 +24,6 @@ public interface EquipoRepository extends JpaRepository<Equipo,String> {
     @Query(value = "select distinct celula from equipos_facilitadores where fullstack=:fullstack", nativeQuery = true)
     List<Object> findDistinctcelulaby(@Param("fullstack") String fullstack);
 
-    @Query(value = "select distinct facilitador, nivel_madurez from equipos_facilitadores where celula=:celula", nativeQuery = true)
+    @Query(value = "SELECT a.celula, a.nivel_madurez, a.facilitador, b.* FROM valoracionequipos.equipos_facilitadores a, valoracionequipos.preguntas b where a.celula=:celula and a.tipo_celula = b.tipocelula", nativeQuery = true)
     List<Object> findDistinctfacilitadorby(@Param("celula") String celula);
-
-
 }
