@@ -96,8 +96,8 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
+			<id>central</id>
+			<url>http://repo1.maven.org/maven2</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
