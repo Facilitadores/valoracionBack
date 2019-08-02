@@ -19,6 +19,7 @@ public class Informacion implements Serializable {
     private Integer nueva_madurezNum;
     private String tipo_valoracion;
 
+
     public Informacion(int id, String celula, String facilitador, String madurez, int madurezNum, String nueva_madurez, int nueva_madurezNum, String tipo_valoracion) {
         this.id = id;
         this.celula = celula;

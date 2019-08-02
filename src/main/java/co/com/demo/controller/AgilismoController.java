@@ -1,6 +1,5 @@
 package co.com.demo.controller;
 
-
 import co.com.demo.model.Agilismo;
 import co.com.demo.repository.AgilismoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
