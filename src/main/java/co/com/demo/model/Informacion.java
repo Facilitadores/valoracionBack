@@ -16,18 +16,18 @@ public class Informacion implements Serializable {
     private String madurez;
     private Integer madurezNum;
     private String nueva_madurez;
-    private Integer nueva_madurezNum;
+    private Integer nueva_madureznum;
     private String tipo_valoracion;
 
 
-    public Informacion(int id, String celula, String facilitador, String madurez, int madurezNum, String nueva_madurez, int nueva_madurezNum, String tipo_valoracion) {
+    public Informacion(int id, String celula, String facilitador, String madurez, int madurezNum, String nueva_madurez, int nueva_madureznum, String tipo_valoracion) {
         this.id = id;
         this.celula = celula;
         this.facilitador = facilitador;
         this.madurez = madurez;
         this.madurezNum = madurezNum;
         this.nueva_madurez = nueva_madurez;
-        this.nueva_madurezNum = nueva_madurezNum;
+        this.nueva_madureznum = nueva_madureznum;
         this.tipo_valoracion = tipo_valoracion;
     }
 
@@ -83,12 +83,12 @@ public class Informacion implements Serializable {
         this.nueva_madurez = nueva_madurez;
     }
 
-    public Integer getNueva_madurezNum() {
-        return nueva_madurezNum;
+    public Integer getNueva_madureznum() {
+        return nueva_madureznum;
     }
 
-    public void setNueva_madurezNum(Integer nueva_madurezNum) {
-        this.nueva_madurezNum = nueva_madurezNum;
+    public void setNueva_madureznum(Integer nueva_madureznum) {
+        this.nueva_madureznum = nueva_madureznum;
     }
 
     public String getTipo_valoracion() {

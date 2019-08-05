@@ -47,4 +47,5 @@ public class EquipoController {
     public List<Object> findDistinctfacilitadorby(@PathVariable(value="celula") String celula) {
         return equipoRepository.findDistinctfacilitadorby(celula);
     }
+
 }

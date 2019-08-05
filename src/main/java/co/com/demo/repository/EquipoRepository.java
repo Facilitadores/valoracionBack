@@ -1,10 +1,15 @@
 package co.com.demo.repository;
 
+import co.com.demo.model.Agilismo;
 import co.com.demo.model.Equipo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.validation.Valid;
 import java.util.List;
 
 public interface EquipoRepository extends JpaRepository<Equipo,String> {
@@ -26,4 +31,9 @@ public interface EquipoRepository extends JpaRepository<Equipo,String> {
 
     @Query(value = "SELECT a.celula, a.nivel_madurez, a.facilitador, b.* FROM valoracionequipos.equipos_facilitadores a, valoracionequipos.preguntas b where a.celula=:celula and a.tipo_celula = b.tipocelula", nativeQuery = true)
     List<Object> findDistinctfacilitadorby(@Param("celula") String celula);
+
+
+
+
+
 }

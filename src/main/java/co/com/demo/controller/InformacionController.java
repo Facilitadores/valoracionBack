@@ -3,7 +3,6 @@ package co.com.demo.controller;
 
 import javax.validation.Valid;
 
-import co.com.demo.model.Equipo;
 import co.com.demo.model.Informacion;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import co.com.demo.repository.InformacionRepository;
@@ -27,4 +26,15 @@ public class InformacionController {
     {
         return informacionRepository.save(data);
     }
-}
+
+    @PostMapping("/guardarMadurez")
+    public Informacion updateMadurez(@RequestBody Informacion data) {
+
+        Informacion ingresoDb = informacionRepository.findByCelula(data.getCelula());
+        ingresoDb.setNueva_madurez(data.getNueva_madurez());
+        ingresoDb.setNueva_madureznum(data.getNueva_madureznum());
+
+        return informacionRepository.save(ingresoDb);
+    }
+
+ }

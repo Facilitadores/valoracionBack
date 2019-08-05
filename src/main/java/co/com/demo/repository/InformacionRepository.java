@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface InformacionRepository extends JpaRepository<Informacion,String> {
 
-
+    Informacion findByCelula(String celula);
 }
