@@ -25,21 +25,28 @@ public class InformacionController {
     public Informacion informacion (@RequestBody Informacion data)
     {
         Informacion updateDb = informacionRepository.findByCelula(data.getCelula());
-        updateDb.setFacilitador(data.getFacilitador());
-        updateDb.setMadurez(data.getMadurez());
-        updateDb.setNueva_madureznum(data.getNueva_madureznum());
-        updateDb.setTipo_valoracion(data.getTipo_valoracion());
-        return informacionRepository.save(updateDb);
+        if(updateDb != null) {
+            updateDb.setFacilitador(data.getFacilitador());
+            updateDb.setMadurez(data.getMadurez());
+            updateDb.setNueva_madureznum(data.getNueva_madureznum());
+            updateDb.setTipo_valoracion(data.getTipo_valoracion());
+            return informacionRepository.save(updateDb);
+        }else {
+            return informacionRepository.save(data);
+        }
     }
 
     @PostMapping("/guardarMadurez")
     public Informacion updateMadurez(@RequestBody Informacion data) {
 
         Informacion ingresoDb = informacionRepository.findByCelula(data.getCelula());
-        ingresoDb.setNueva_madurez(data.getNueva_madurez());
-        ingresoDb.setNueva_madureznum(data.getNueva_madureznum());
-
-        return informacionRepository.save(ingresoDb);
+        if(ingresoDb != null) {
+            ingresoDb.setNueva_madurez(data.getNueva_madurez());
+            ingresoDb.setNueva_madureznum(data.getNueva_madureznum());
+            return informacionRepository.save(ingresoDb);
+        }else{
+            return informacionRepository.save(data);
+        }
     }
 
  }

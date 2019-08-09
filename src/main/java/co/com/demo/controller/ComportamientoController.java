@@ -18,10 +18,14 @@ public class ComportamientoController {
     public Comportamiento pilar1 (@RequestBody Comportamiento data)
     {
         Comportamiento updateDb = comportamientoRepository.findByCelula(data.getCelula());
-        updateDb.setComportamiento(data.getComportamiento());
-        updateDb.setComportamientonum(data.getComportamientonum());
-        return comportamientoRepository.save(updateDb);
+        if(updateDb != null) {
+            updateDb.setComportamiento(data.getComportamiento());
+            updateDb.setComportamientonum(data.getComportamientonum());
+            return comportamientoRepository.save(updateDb);
+
+        } else{
+                return comportamientoRepository.save(data);
+            }
     }
-
-
 }
+
