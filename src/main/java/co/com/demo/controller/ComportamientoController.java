@@ -17,6 +17,11 @@ public class ComportamientoController {
     @PostMapping("/guardarPilar1")
     public Comportamiento pilar1 (@RequestBody Comportamiento data)
     {
-        return comportamientoRepository.save(data);
+        Comportamiento updateDb = comportamientoRepository.findByCelula(data.getCelula());
+        updateDb.setComportamiento(data.getComportamiento());
+        updateDb.setComportamientonum(data.getComportamientonum());
+        return comportamientoRepository.save(updateDb);
     }
+
+
 }

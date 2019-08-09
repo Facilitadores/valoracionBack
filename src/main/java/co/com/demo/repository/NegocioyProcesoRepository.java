@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface NegocioyProcesoRepository extends JpaRepository<NegocioyProceso,String> {
 
+    NegocioyProceso findByCelula(String celula);
 
 }
 

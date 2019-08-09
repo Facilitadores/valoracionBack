@@ -19,7 +19,10 @@ public class AgilismoController {
     @PostMapping("/guardarPilar4")
     public Agilismo pilar4 (@RequestBody Agilismo data)
     {
-        return agilismoRepository.save(data);
+        Agilismo updateDb = agilismoRepository.findByCelula(data.getCelula());
+        updateDb.setAgilismo(data.getAgilismo());
+        updateDb.setAgilismonum(data.getAgilismonum());
+        return agilismoRepository.save(updateDb);
     }
 
     @GetMapping("/resultadofinal/{celula}")

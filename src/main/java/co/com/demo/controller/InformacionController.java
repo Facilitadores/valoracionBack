@@ -24,7 +24,12 @@ public class InformacionController {
     @PostMapping("/guardarinformacion")
     public Informacion informacion (@RequestBody Informacion data)
     {
-        return informacionRepository.save(data);
+        Informacion updateDb = informacionRepository.findByCelula(data.getCelula());
+        updateDb.setFacilitador(data.getFacilitador());
+        updateDb.setMadurez(data.getMadurez());
+        updateDb.setNueva_madureznum(data.getNueva_madureznum());
+        updateDb.setTipo_valoracion(data.getTipo_valoracion());
+        return informacionRepository.save(updateDb);
     }
 
     @PostMapping("/guardarMadurez")

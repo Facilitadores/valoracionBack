@@ -17,6 +17,16 @@ public class TecnicoController {
     @PostMapping("/guardarPilar2")
     public Tecnico pilar2 (@RequestBody Tecnico data)
     {
-        return tecnicoRepository.save(data);
+        Tecnico updateDb = tecnicoRepository.findByCelula(data.getCelula());
+        updateDb.setAplicaciones(data.getAplicaciones());
+        updateDb.setAplicacionesnume(data.getAplicacionesnume());
+        updateDb.setArquitectDevops(data.getArquitectDevops());
+        updateDb.setArquitectnumeDevops(data.getArquitectnumeDevops());
+        updateDb.setEstandares(data.getEstandares());
+        updateDb.setEstandaresnume(data.getEstandaresnume());
+        updateDb.setTecnicoDevops(data.getTecnicoDevops());
+        updateDb.setTecniconumeDevops(data.getTecniconumeDevops());
+        updateDb.setResultpilar2(data.getResultpilar2());
+        return tecnicoRepository.save(updateDb);
     }
 }
